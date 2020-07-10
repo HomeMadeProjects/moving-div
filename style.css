@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    height: 60vh;
+    background-color: grey;
+    text-align: center;
+    margin: 20px auto;
+    /* overflow: hidden; */
+}
+
+.movingSquare {
+    position: absolute;
+    top: calc(50% - 60px);
+    left: calc(50% - 60px);
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin: 10px;
+    transition: .3s;
+}
+
+#wrap {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 30%;
+    justify-content: center;
+    position: absolute;
+    top: 120%;
+    width: 100%;
+}
+
+.goLeft,
+.rotate,
+.goRight {
+    width: 80px;
+    height: 40px;
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.goLeft:hover,
+.rotate:hover,
+.goRight:hover {
+    background-color: rgb(67, 141, 214);
+    color: black;
+}
+
+.goLeft:active,
+.rotate:active,
+.goRight:active {
+    background-color: rgb(235, 61, 30);
+    color: black;
+}
+
+.left {
+    transform: translate(-200%, 0);
+}
+
+.rolling {
+    transform: rotate(360deg);
+}
+
+.right {
+    transform: translate(200%, 0);
+}
